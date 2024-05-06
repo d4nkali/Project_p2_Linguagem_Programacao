@@ -6,7 +6,7 @@ public class Cliente {
     
     
     private int numeroPessoa ;
-    private String name;
+    private String nome;
     private String cpf;
     private String email;
     private Date accountCreationDate;
@@ -17,7 +17,7 @@ public class Cliente {
 
     public Cliente(String name, String cpf, String email) {
         this.numeroPessoa = Cliente.counter;
-        this.name = name;
+        this.nome = nome;
         this.cpf = cpf;
         this.email = email;
         this.telefone = telefone;
@@ -29,11 +29,11 @@ public class Cliente {
         return this.numeroPessoa;
     }
 
-    public String getName() {
-        return name;
+    public String getNome() {
+        return nome;
     }
-    public void setName(String name) {
-        this.name = name;
+    public void setNome(String nome) {
+        this.nome = nome;
     }
     public String getCpf() {
         return cpf;
@@ -58,7 +58,7 @@ public class Cliente {
     }
 
     public String toString() {
-        return  "\nName: " + this.getName() +
+        return  "\nName: " + this.getNome() +
                 "\nCPF: " + this.getCpf() +
                 "\nEmail: " + this.getEmail() +
                 "\nEmail: " + this.getTelefone() +
