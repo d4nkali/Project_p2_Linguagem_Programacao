@@ -59,7 +59,7 @@ public class Conta {
                 setSaldo(getSaldo() + valor);
                 //this.saldo = this.getSaldo() + valor;
                 System.out.println("Seu depósito foi realizado com sucesso!");
-            }else {
+            } else {
                 System.out.println("Não foi possível realizar o depósito!");
             }
         }
@@ -76,7 +76,7 @@ public class Conta {
         }
 
         //função de transferência
-        
+
         public void transferencia(Conta contaParaDeposito, Double valor) {
             if(valor > 0 && this.getSaldo() >= valor) {
                 setSaldo(getSaldo() - valor);
