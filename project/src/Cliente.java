@@ -4,7 +4,7 @@ public class Cliente {
 
     private static int counter = 1;
     
-    
+    // Criação de abstração
     private int numeroPessoa ;
     private String nome;
     private String cpf;
@@ -12,11 +12,9 @@ public class Cliente {
     private Date accountCreationDate;
     private int telefone;
 
-
-    public Cliente() { }
-
     public Cliente(String name, String cpf, String email) {
-        this.numeroPessoa = Cliente.counter;
+      
+        this.numeroPessoa = Cliente.counter; 
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
@@ -24,6 +22,8 @@ public class Cliente {
         this.accountCreationDate = new Date();
         Cliente.counter += 1;
     }
+
+    // Getters e Setters 
 
     public int getNumeroPessoa() {
         return this.numeroPessoa;
@@ -57,6 +57,7 @@ public class Cliente {
         this.telefone = telefone;
     }
 
+    // Retornar para toString de todos os objetos
     public String toString() {
         return  "\nName: " + this.getNome() +
                 "\nCPF: " + this.getCpf() +
