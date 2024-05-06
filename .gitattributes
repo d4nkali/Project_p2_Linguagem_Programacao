@@ -1,0 +1,2 @@
+# Define que o Git sempre converterá delimitadores de linha em CRLF
+* eol=crlf
