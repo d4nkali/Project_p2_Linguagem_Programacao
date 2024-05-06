@@ -1,7 +1,9 @@
 # Ignorar pasta vscode
-
 .vscode/*
 
 # Ignorar pastas do intellij
-
 .idea/*
+
+# Ignorar pasta de project
+project/.vscode/*
+project/lib/

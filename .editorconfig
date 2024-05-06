@@ -3,5 +3,12 @@
 # top-most EditorConfig file
 root = true
 
-# Para todos os arquivos
-[*]
+# Para todos os arquivos Java
+[*.java]
+
+    indent_size = 4
+    indent_style = space
+    insert_final_newline = false
+    end_of_line = crlf
+    charset = utf-8
+    trim_trailing_whitespace = false
