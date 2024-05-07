@@ -1,21 +1,22 @@
 public class Conta {
-        private static int accountCounter = 1;
-    
-        // Criação das abstrações 
 
-        private int numeroConta;
-        private Cliente cliente;
-        private Double saldo = 0.0;
-    
-    
-        public Conta(Cliente cliente) {
-            this.numeroConta = Conta.accountCounter;
-            this.cliente = cliente;
-            this.updateSaldo();
-            Conta.accountCounter += 1;
-        }
-    
-        //getters e setters
+    private static int accountCounter = 1;
+
+    // Criação das abstrações 
+    private int numeroConta;
+    private Cliente cliente;
+    private Double saldo = 0.0;
+
+    public Conta(Cliente cliente) {
+
+        this.numeroConta = Conta.accountCounter;
+        this.cliente = cliente;
+        this.updateSaldo();
+        Conta.accountCounter += 1;
+
+    }
+
+    //getters e setters
 
         public int getNumeroConta() {
             return numeroConta;
@@ -36,22 +37,24 @@ public class Conta {
         public void setSaldo(Double saldo) {
             this.saldo = saldo;
         }
-    
+
         private void updateSaldo() {
             this.saldo = this.getSaldo();
         }
-        
-        //Receber o To String de Cliente
-        public String toString() {
-    
-            return "\nBank account: " + this.getNumeroConta() +
-                    "\nCliente: " + this.cliente.getNome() +
-                    "\nCPF: " + this.cliente.getCpf() +
-                    "\nEmail: " + this.cliente.getEmail() +
-                    "\nEmail: " + this.cliente.getTelefone() +
-                    "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
-                    "\n" ;
-        }
+
+    //Receber o To String de Cliente
+    public String toString() {
+
+    return "\nBank account: " + this.getNumeroConta() +
+            "\nCliente: " + this.cliente.getNome() +
+            "\nCPF: " + this.cliente.getCpf() +
+            "\nEmail: " + this.cliente.getEmail() +
+            "\nEmail: " + this.cliente.getTelefone() +
+            "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
+            "\n" ;
+
+    }
+
         // função para depósito
 
         public void depositar(Double valor) {
@@ -84,10 +87,10 @@ public class Conta {
                 contaParaDeposito.saldo = contaParaDeposito.getSaldo() + valor;
                 System.out.println("Transferência realizada com sucesso!");
             } else {
-                System.out.println("Não foi possível realizar a tranferência");
+                System.out.println("Não foi possível realizar a transferência");
             }
-    
+
         }
-    
-    }
+
+}
 
