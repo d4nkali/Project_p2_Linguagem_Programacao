@@ -55,42 +55,4 @@ public class Conta {
 
     }
 
-        // função para depósito
-
-        public void depositar(Double valor) {
-            if(valor > 0) {
-                setSaldo(getSaldo() + valor);
-                //this.saldo = this.getSaldo() + valor;
-                System.out.println("Seu depósito foi realizado com sucesso!");
-            } else {
-                System.out.println("Não foi possível realizar o depósito!");
-            }
-        }
-
-        //função para sacar
-        
-        public void sacar(Double valor) {
-            if(valor > 0 && this.getSaldo() >= valor) {
-                setSaldo(getSaldo() - valor);
-                System.out.println("Saque realizado com sucesso!");
-            } else {
-                System.out.println("Não foi possível realizar o saque!");
-            }
-        }
-
-        //função de transferência
-
-        public void transferencia(Conta contaParaDeposito, Double valor) {
-            if(valor > 0 && this.getSaldo() >= valor) {
-                setSaldo(getSaldo() - valor);
-                //this.saldo = this.getSaldo() - valor;
-                contaParaDeposito.saldo = contaParaDeposito.getSaldo() + valor;
-                System.out.println("Transferência realizada com sucesso!");
-            } else {
-                System.out.println("Não foi possível realizar a transferência");
-            }
-
-        }
-
 }
-

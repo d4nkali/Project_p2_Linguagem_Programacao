@@ -6,5 +6,7 @@ public class Main {
 
         Scanner sc = new Scanner(System.in);
 
+        System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
+
     }
 }
