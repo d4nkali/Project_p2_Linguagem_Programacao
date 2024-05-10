@@ -5,17 +5,18 @@ public class Cliente {
     private static int counter = 1;
 
     // Criação de abstração
-    private int numeroPessoa, telefone;
-    private String nome, cpf, email;
+    private int numeroPessoa, cpf;
+    private String nome, email, senha;
     private Date accountCreationDate;
 
-    public Cliente(String name, String cpf, String email) {
+    //* Construtor do Cliente
+    public Cliente(String nome, int cpf, String email, String senha) {
 
         this.numeroPessoa = Cliente.counter; 
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;
-        this.telefone = telefone;
+        this.senha = senha;
         this.accountCreationDate = new Date();
         Cliente.counter += 1;
 
@@ -35,11 +36,11 @@ public class Cliente {
             this.nome = nome;
         }
 
-        public String getCpf() {
+        public int getCpf() {
             return cpf;
         }
 
-        public void setCpf(String cpf) {
+        public void setCpf(int cpf) {
             this.cpf = cpf;
         }
 
@@ -51,25 +52,25 @@ public class Cliente {
             this.email = email;
         }
 
+        public String getSenha() {
+            return senha;
+        }
+
+        public void setSenha (String senha) {
+            this.senha = senha;
+        }
+
         public Date getAccountCreationDate() {
             return this.accountCreationDate;
         }
 
-        public int getTelefone() {
-            return this.telefone;
-        }
-
-        public void setTelefone(int telefone) {
-            this.telefone = telefone;
-        }
-
-    // Retornar para toString de todos os objetos
+    // Retornar para toString
     public String toString() {
 
-        return  "\nName: " + this.getNome() +
+        return  "\nNome: " + this.getNome() +
                 "\nCPF: " + this.getCpf() +
                 "\nEmail: " + this.getEmail() +
-                "\nEmail: " + this.getTelefone() +
+                "\nSenha: " + this.getSenha() +
                 "\nAccount Creation Date: " + Utils.dateToString(this.getAccountCreationDate());
 
     }
