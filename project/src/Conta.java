@@ -49,7 +49,7 @@ public class Conta {
             "\nCliente: " + this.cliente.getNome() +
             "\nCPF: " + this.cliente.getCpf() +
             "\nEmail: " + this.cliente.getEmail() +
-            "\nEmail: " + this.cliente.getTelefone() +
+            "\nSenha: " + this.cliente.getSenha() +
             "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
             "\n" ;
 
