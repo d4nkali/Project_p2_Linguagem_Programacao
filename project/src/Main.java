@@ -5,6 +5,7 @@ public class Main {
 
         String c_nome = "", c_senha = "", c_email = "";
         int c_cpf = 0;
+        int opcao = 0;
 
         boolean op_login_success = false;
         int op_login = 0;
