@@ -3,9 +3,8 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) throws Exception {
 
-        String c_nome = "", c_senha = "", c_email = "";
-        int c_cpf = 0;
-        int opcao = 0;
+        String c_nome = "", c_senha = "", c_email = "", c_login_nome ="", c_login_senha = "";
+        int c_cpf = 0, opcao = 0;
 
         boolean op_login_success = false;
         int op_login = 0;
@@ -16,25 +15,35 @@ public class Main {
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
 
         do {
-        
+
             System.out.println("Voce deseja Logar [1] ou Cadastrar [2]? ");
             op_login = sc.nextInt();
             switch (op_login) {
 
                 case 1:
 
-                //TODO: Fazer login @JoaoMagalhaes-hub
+                    System.out.print("Digite seu nome: ");
+                    c_login_nome = sc.next();
+                    System.out.print("Digite sua senha: ");
+                    c_login_senha = sc.next();
 
-                System.out.print("Digite seu nome: ");
-                c_nome = sc.next();
-                System.out.print("Digite sua senha: ");
-                c_senha = sc.next();
+                    if (c_login_nome.equals(c_nome) && c_login_senha.equals(c_senha)) {
+
+                        System.out.println("Login bem sucedido!");
+                        op_login_success = true;
+
+                    }
+
+                    else {
+
+                        System.out.println("Credenciais não cadastradas. Tente novamente!");
+                        op_login_success = false;
+
+                    }
 
                     break;
 
                 case 2:
-
-                //TODO: Terminar cadastro @d4nkali
 
                     System.out.print("Digite o seu nome: ");
                     c_nome = sc.next();
@@ -53,11 +62,10 @@ public class Main {
 
             }
 
-        } while (op_login_success == true);
+        } while (op_login_success == false);
 
-        //TODO: Fazer switch case e do while @JANzxz, @Olausz
+        do {
 
-          do {
             System.out.println("Bem-vindo ao Sistema de Operações Bancárias");
             System.out.println("Escolha uma das seguintes opções:");
             System.out.println("1 - Extrato");
@@ -71,11 +79,14 @@ public class Main {
             opcao = sc.nextInt();
 
             switch (opcao) {
+
                 case 1:
+
                     System.out.println("Você selecionou: Extrato");
                     break;
 
                 case 2:
+
                     System.out.println("Você selecionou: Depósito");
                     break;
 
@@ -84,24 +95,35 @@ public class Main {
                     break;
 
                 case 4:
+
                     System.out.println("Você selecionou: Transferência");
                     break;
 
                 case 5:
+
                     System.out.println("Você selecionou: Conversor de Moeda");
                     break;
 
                 case 6:
+
                     System.out.println("Você selecionou: Stake");
                     break;
 
                 case 0:
+
                     System.out.println("Saindo do sistema...");
                     break;
 
                 default:
+
                     System.out.println("Opção inválida. Por favor, selecione uma opção válida.");
+
             }
+
         } while (opcao != 0);
+
+        sc.close();
+
     }
+
 }
