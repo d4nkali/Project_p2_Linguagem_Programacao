@@ -24,6 +24,10 @@ public class Main {
 
                 //TODO: Fazer login @JoaoMagalhaes-hub
 
+                System.out.print("Digite seu nome: ");
+                c_nome = sc.next();
+                System.out.print("Digite sua senha: ");
+                c_senha = sc.next();
 
                     break;
 
