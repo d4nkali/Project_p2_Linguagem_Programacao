@@ -1,12 +1,13 @@
-public class Conta {
+public class Conta implements Corretora{
 
     private static int accountCounter = 1;
 
     // Criação das abstrações 
     private int numeroConta;
     private Cliente cliente;
-    private Double saldo = 0.0;
+    private float saldo = 0, quant_deposito = 0;
 
+    //* Construtor da Conta
     public Conta(Cliente cliente) {
 
         this.numeroConta = Conta.accountCounter;
@@ -16,7 +17,7 @@ public class Conta {
 
     }
 
-    //getters e setters
+    // Getters e Setters
 
         public int getNumeroConta() {
             return numeroConta;
@@ -30,11 +31,11 @@ public class Conta {
             this.cliente = cliente;
         }
 
-        public Double getSaldo() {
+        public float getSaldo() {
             return saldo;
         }
 
-        public void setSaldo(Double saldo) {
+        public void setSaldo(float saldo) {
             this.saldo = saldo;
         }
 
@@ -42,17 +43,33 @@ public class Conta {
             this.saldo = this.getSaldo();
         }
 
-    //Receber o To String de Cliente
+    // Receber o To String de Cliente
     public String toString() {
 
-    return "\nBank account: " + this.getNumeroConta() +
+        return "\nBank account: " + this.getNumeroConta() +
             "\nCliente: " + this.cliente.getNome() +
             "\nCPF: " + this.cliente.getCpf() +
             "\nEmail: " + this.cliente.getEmail() +
             "\nSenha: " + this.cliente.getSenha() +
-            "\nSaldo: " + Utils.doubleToString(this.getSaldo()) +
+            "\nSaldo: " + Utils.floatToString(this.getSaldo()) +
             "\n" ;
 
     }
+
+    @Override
+
+    public void extrato() {}
+
+    public void depositar() {
+
+        System.out.println("Digite qual moeda/criptomoeda vai ser depositada:");
+
+        System.out.print("Digite a quantia a ser depositada: ");
+
+    }
+
+    public void sacar() {}
+
+    public void transferir() {}
 
 }

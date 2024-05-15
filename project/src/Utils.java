@@ -16,7 +16,7 @@ public class Utils {
         return Utils.formatandoData.format(data);
     }
 
-    public static String doubleToString(Double valor) {
+    public static String floatToString(float valor) {
         return Utils.formatandoNumeros.format(valor);
     }
 
