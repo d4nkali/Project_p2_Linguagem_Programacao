@@ -5,7 +5,7 @@ public class Conta implements Corretora{
     // Criação das abstrações 
     private int numeroConta;
     private Cliente cliente;
-    private float saldo = 0, quant_deposito = 0;
+    private float saldo = 0, quant_deposito;
 
     //* Construtor da Conta
     public Conta(Cliente cliente) {
