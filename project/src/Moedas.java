@@ -48,6 +48,16 @@ public class Moedas {
 
     //* Objeto das moedas
 
-        Moedas btc = new Moedas("Bitcoin", 332941, TipoMoeda.CRIPTOMOEDA);
+    //* CRIPTOMOEDAS */
+        Moedas bitcoin = new Moedas("Bitcoin", 332941, TipoMoeda.CRIPTOMOEDA);
+        Moedas ethereum  = new Moedas("Ethereum ", 1532237, TipoMoeda.CRIPTOMOEDA);
+        Moedas solana  = new Moedas("Solana ", 14462 , TipoMoeda.CRIPTOMOEDA);
+        Moedas urubucoin  = new Moedas("Urubu Coin ", 1 , TipoMoeda.CRIPTOMOEDA);
+
+    //* Moedas Normais */
+        Moedas real = new Moedas("Dolar", 100, TipoMoeda.MOEDA);
+        Moedas euro = new Moedas("Euro", 558, TipoMoeda.MOEDA);
+        Moedas dolar = new Moedas("Real", 513, TipoMoeda.MOEDA);
+        Moedas iene = new Moedas("Iene", 0033, TipoMoeda.MOEDA);
 
 }
