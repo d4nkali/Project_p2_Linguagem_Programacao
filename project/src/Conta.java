@@ -1,14 +1,18 @@
+import java.util.Scanner;
+
 public class Conta implements Corretora{
+
+    Scanner sc1 = new Scanner(System.in);
 
     private static int accountCounter = 1;
 
     // Criação das abstrações 
-    private int numeroConta;
+    private int numeroConta, opcao_moeda_depos;
     private Cliente cliente;
-    private float saldo = 0, quant_deposito;
+    private float saldo = 0;
 
     //* Construtor da Conta
-    public Conta(Cliente cliente) {
+    public Conta(Cliente cliente, Moedas moedas) {
 
         this.numeroConta = Conta.accountCounter;
         this.cliente = cliente;
@@ -62,9 +66,22 @@ public class Conta implements Corretora{
 
     public void depositar() {
 
-        System.out.println("Digite qual moeda/criptomoeda vai ser depositada:");
+        System.out.println("Digite qual moeda/criptomoeda vai ser depositada: ");
 
-        System.out.print("Digite a quantia a ser depositada: ");
+        switch (opcao_moeda_depos) {
+
+            case 1:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                sc1.nextFloat();
+                break;
+        
+            default:
+
+                System.out.println("Opção Invalida!");
+                break;
+
+        }
 
     }
 
