@@ -2,13 +2,14 @@ public class Moedas {
 
     // Criação das abstrações 
     private float valor_moeda;
-    private String nome_moeda;
+    private String nome_moeda, codigo_moeda;
     public final TipoMoeda tipo;
 
     //* Construtor de Moedas
-    public Moedas(String nome_moeda, float valor_moeda, TipoMoeda tipo) {
+    public Moedas(String nome_moeda, String codigo_moeda, float valor_moeda, TipoMoeda tipo) {
 
         this.nome_moeda = nome_moeda;
+        this.codigo_moeda = codigo_moeda;
         this.valor_moeda = valor_moeda;
         this.tipo= tipo;
 
@@ -22,6 +23,14 @@ public class Moedas {
 
         public void setValor_moeda(float valor_moeda) {
             this.valor_moeda = valor_moeda;
+        }
+
+        public String getCodigo_moeda() {
+            return this.codigo_moeda;
+        }
+
+        public void setCodigo_moeda(String codigo_moeda) {
+            this.codigo_moeda = codigo_moeda;
         }
 
         public String getNome_moeda() {
@@ -48,16 +57,16 @@ public class Moedas {
 
     //* Objeto das moedas
 
-    //* CRIPTOMOEDAS */
-        Moedas bitcoin = new Moedas("Bitcoin", 332941, TipoMoeda.CRIPTOMOEDA);
-        Moedas ethereum  = new Moedas("Ethereum ", 1532237, TipoMoeda.CRIPTOMOEDA);
-        Moedas solana  = new Moedas("Solana ", 14462 , TipoMoeda.CRIPTOMOEDA);
-        Moedas urubucoin  = new Moedas("Urubu Coin ", 1 , TipoMoeda.CRIPTOMOEDA);
+        // Criptomoedas
+            static Moedas bitcoin = new Moedas("Bitcoin", "BTC", 338941.68f, TipoMoeda.CRIPTOMOEDA);
+            static Moedas ethereum  = new Moedas("Ethereum ", "ETH", 15178.67f, TipoMoeda.CRIPTOMOEDA);
+            static Moedas solana  = new Moedas("Solana ", "SOL", 825.20f , TipoMoeda.CRIPTOMOEDA);
+            static Moedas urubucoin  = new Moedas("Urubu Coin ", "URC",0.110f , TipoMoeda.CRIPTOMOEDA);
 
-    //* Moedas Normais */
-        Moedas real = new Moedas("Dolar", 100, TipoMoeda.MOEDA);
-        Moedas euro = new Moedas("Euro", 558, TipoMoeda.MOEDA);
-        Moedas dolar = new Moedas("Real", 513, TipoMoeda.MOEDA);
-        Moedas iene = new Moedas("Iene", 0033, TipoMoeda.MOEDA);
+        // Moedas
+            static Moedas real = new Moedas("Real", "BRL", 1.00f, TipoMoeda.MOEDA);
+            static Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.MOEDA);
+            static Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.MOEDA);
+            static Moedas iene = new Moedas("Iene", "JPY", 0.033f, TipoMoeda.MOEDA);
 
 }
