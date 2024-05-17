@@ -55,18 +55,4 @@ public class Moedas {
             "}";
     }
 
-    //* Objeto das moedas
-
-        // Criptomoedas
-            Moedas bitcoin = new Moedas("Bitcoin", "BTC", 338941.68f, TipoMoeda.CRIPTOMOEDA);
-            Moedas ethereum  = new Moedas("Ethereum ", "ETH", 15178.67f, TipoMoeda.CRIPTOMOEDA);
-            Moedas solana  = new Moedas("Solana ", "SOL", 825.20f , TipoMoeda.CRIPTOMOEDA);
-            Moedas urubucoin  = new Moedas("Urubu Coin ", "URC",0.110f , TipoMoeda.CRIPTOMOEDA);
-
-        // Moedas
-            Moedas real = new Moedas("Real", "BRL", 1.00f, TipoMoeda.MOEDA);
-            Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.MOEDA);
-            Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.MOEDA);
-            Moedas iene = new Moedas("Iene", "JPY", 0.033f, TipoMoeda.MOEDA);
-
 }

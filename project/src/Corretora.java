@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+// TODO: Implementar as duas carteiras
+
 public class Corretora implements Acoes{
 
     Scanner sc1 = new Scanner(System.in);
@@ -9,14 +11,13 @@ public class Corretora implements Acoes{
     // Criação das abstrações 
     private int numeroConta, opcao_moeda_depos;
     private Cliente cliente;
-    private float saldo = 0;
+    private float quant_deposito = 0;
 
     //* Construtor da Conta
     public Corretora(Cliente cliente){
 
         this.numeroConta = Corretora.accountCounter;
         this.cliente = cliente;
-        this.updateSaldo();
         Corretora.accountCounter += 1;
 
     }
@@ -35,18 +36,6 @@ public class Corretora implements Acoes{
             this.cliente = cliente;
         }
 
-        public float getSaldo() {
-            return saldo;
-        }
-
-        public void setSaldo(float saldo) {
-            this.saldo = saldo;
-        }
-
-        private void updateSaldo() {
-            this.saldo = this.getSaldo();
-        }
-
     // Receber o To String de Cliente
     public String toString() {
 
@@ -55,10 +44,24 @@ public class Corretora implements Acoes{
             "\nCPF: " + this.cliente.getCpf() +
             "\nEmail: " + this.cliente.getEmail() +
             "\nSenha: " + this.cliente.getSenha() +
-            "\nSaldo: " + Utils.floatToString(this.getSaldo()) +
             "\n" ;
 
     }
+
+        //* Objeto das moedas
+
+        // Criptomoedas
+        Moedas bitcoin = new Moedas("Bitcoin", "BTC", 338941.68f, TipoMoeda.CRIPTOMOEDA);
+        Moedas ethereum  = new Moedas("Ethereum ", "ETH", 15178.67f, TipoMoeda.CRIPTOMOEDA);
+        Moedas solana  = new Moedas("Solana ", "SOL", 825.20f , TipoMoeda.CRIPTOMOEDA);
+        Moedas urubucoin  = new Moedas("Urubu Coin ", "URC",0.110f , TipoMoeda.CRIPTOMOEDA);
+
+    // Moedas
+        Moedas real = new Moedas("Real", "BRL", 1.00f, TipoMoeda.MOEDA);
+        Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.MOEDA);
+        Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.MOEDA);
+        Moedas iene = new Moedas("Iene", "JPY", 0.033f, TipoMoeda.MOEDA);
+
 
     @Override
 
@@ -73,7 +76,7 @@ public class Corretora implements Acoes{
             case 1:
 
                 System.out.print("Digite a quantia a ser depositada: ");
-                sc1.nextFloat();
+                quant_deposito = sc1.nextFloat();
                 break;
         
             default:
