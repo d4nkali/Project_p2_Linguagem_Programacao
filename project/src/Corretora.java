@@ -57,11 +57,10 @@ public class Corretora implements Acoes{
         Moedas urubucoin  = new Moedas("Urubu Coin ", "URC",0.110f , TipoMoeda.CRIPTOMOEDA);
 
     // Moedas
-        Moedas real = new Moedas("Real", "BRL", 1.00f, TipoMoeda.MOEDA);
-        Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.MOEDA);
-        Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.MOEDA);
-        Moedas iene = new Moedas("Iene", "JPY", 0.033f, TipoMoeda.MOEDA);
-
+        Moedas real = new Moedas("Real", "BRL", 1.00f, TipoMoeda.LASTREAVEL);
+        Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.LASTREAVEL);
+        Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.LASTREAVEL);
+        Moedas iene = new Moedas("Iene", "JPY", 0.033f, TipoMoeda.LASTREAVEL);
 
     @Override
 
