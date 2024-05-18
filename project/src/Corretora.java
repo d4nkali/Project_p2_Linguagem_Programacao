@@ -1,17 +1,10 @@
-import java.util.Scanner;
-
-// TODO: Implementar as duas carteiras
-
-public class Corretora implements Acoes{
-
-    Scanner sc1 = new Scanner(System.in);
+public class Corretora {
 
     private static int accountCounter = 1;
 
     // Criação das abstrações 
-    private int numeroConta, opcao_moeda_depos;
+    private int numeroConta;
     private Cliente cliente;
-    private float quant_deposito = 0;
 
     //* Construtor da Conta
     public Corretora(Cliente cliente){
@@ -61,34 +54,5 @@ public class Corretora implements Acoes{
         Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.LASTREAVEL);
         Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.LASTREAVEL);
         Moedas iene = new Moedas("Iene", "JPY", 0.033f, TipoMoeda.LASTREAVEL);
-
-    @Override
-
-    public void extrato() {}
-
-    public void depositar() {
-
-        System.out.println("Digite qual moeda/criptomoeda vai ser depositada: ");
-
-        switch (opcao_moeda_depos) {
-
-            case 1:
-
-                System.out.print("Digite a quantia a ser depositada: ");
-                quant_deposito = sc1.nextFloat();
-                break;
-        
-            default:
-
-                System.out.println("Opção Invalida!");
-                break;
-
-        }
-
-    }
-
-    public void sacar() {}
-
-    public void transferir() {}
 
 }

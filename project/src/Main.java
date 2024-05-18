@@ -1,16 +1,24 @@
 import java.util.Scanner;
 
 public class Main {
+
     public static void main(String[] args) throws Exception {
 
-        String c_nome = "", c_senha = "", c_email = "", c_login_nome ="", c_login_senha = "";
-        int c_cpf = 0, opcao = 0;
+        // Variáveis para Criar usuário
 
-        boolean op_login_success = false;
-        int op_login = 0;
+            String c_nome = "", c_senha = "", c_email = "", c_login_nome = "", c_login_senha = "";
+            int c_cpf = 0;
 
-        Scanner sc = new Scanner(System.in);
-        Cliente c1 = new Cliente(c_nome, c_cpf, c_email, c_senha);
+        // Variáveis de opção:
+
+            boolean op_login_success = false;
+            int op_login = 0, op_acao = 0;
+
+        //! Objetos
+
+            Scanner sc = new Scanner(System.in);
+            Cliente c1 = new Cliente(c_nome, c_cpf, c_email, c_senha);
+            CarteiraSpot cs = new CarteiraSpot(0, 0, 0);
 
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
 
@@ -32,7 +40,7 @@ public class Main {
                         System.out.println("Login bem sucedido!");
                         op_login_success = true;
 
-                    }
+                    } 
 
                     else {
 
@@ -40,7 +48,6 @@ public class Main {
                         op_login_success = false;
 
                     }
-
                     break;
 
                 case 2:
@@ -62,7 +69,7 @@ public class Main {
 
             }
 
-        } while (op_login_success == false);
+        } while (!op_login_success);
 
         do {
 
@@ -76,9 +83,9 @@ public class Main {
             System.out.println("6 - Stake");
             System.out.println("0 - Sair");
 
-            opcao = sc.nextInt();
+            op_acao = sc.nextInt();
 
-            switch (opcao) {
+            switch (op_acao) {
 
                 case 1:
 
@@ -88,9 +95,11 @@ public class Main {
                 case 2:
 
                     System.out.println("Você selecionou: Depósito");
+                    cs.depositar(sc);
                     break;
 
                 case 3:
+
                     System.out.println("Você selecionou: Saque");
                     break;
 
@@ -117,10 +126,11 @@ public class Main {
                 default:
 
                     System.out.println("Opção inválida. Por favor, selecione uma opção válida.");
+                    break;
 
             }
 
-        } while (opcao != 0);
+        } while (op_acao != 0);
 
         sc.close();
 
