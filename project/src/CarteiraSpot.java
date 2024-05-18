@@ -53,7 +53,12 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     }
 
     @Override
-    public void extrato() {}
+    public void extrato() { //* Criando função para exebir o extrato da carteira
+
+        System.out.println("Saldo das moedas: ");
+        System.out.println("Real: " + brl_quant);
+
+    }
 
     public void depositar(Scanner sc) { //* Criando função para depositar as moedas
 

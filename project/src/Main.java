@@ -93,6 +93,7 @@ public class Main {
                 case 1:
 
                     System.out.println("Você selecionou: Extrato");
+                    cs.extrato();
                     break;
 
                 case 2:
