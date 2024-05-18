@@ -1,5 +1,7 @@
 import java.util.Scanner;
 
+//TODO: Implementar as funções em seus lugares
+
 public class Main {
 
     public static void main(String[] args) throws Exception {
@@ -22,7 +24,7 @@ public class Main {
 
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
 
-        do {
+        do { //* Loop Login/Cadastro
 
             System.out.println("Voce deseja Logar [1] ou Cadastrar [2]? ");
             op_login = sc.nextInt();
@@ -35,17 +37,18 @@ public class Main {
                     System.out.print("Digite sua senha: ");
                     c_login_senha = sc.next();
 
+                    //* Se o login e senha for iguais ao cadastrado, então:
                     if (c_login_nome.equals(c_nome) && c_login_senha.equals(c_senha)) {
 
                         System.out.println("Login bem sucedido!");
-                        op_login_success = true;
+                        op_login_success = true; //! Define que o login foi feito com sucesso
 
                     } 
 
-                    else {
+                    else { //* Senão:
 
                         System.out.println("Credenciais não cadastradas. Tente novamente!");
-                        op_login_success = false;
+                        op_login_success = false; //! Define que o login não foi autorizado
 
                     }
                     break;
@@ -69,9 +72,9 @@ public class Main {
 
             }
 
-        } while (!op_login_success);
+        } while (!op_login_success); //* Ira parar de repetir quando o login for autorizado
 
-        do {
+        do { //* Loop da Tela principal
 
             System.out.println("Bem-vindo ao Sistema de Operações Bancárias");
             System.out.println("Escolha uma das seguintes opções:");
@@ -79,7 +82,7 @@ public class Main {
             System.out.println("2 - Depósito");
             System.out.println("3 - Saque");
             System.out.println("4 - Transferência");
-            System.out.println("5 - Conversor de Moeda");
+            System.out.println("5 - Conversor de Moedas");
             System.out.println("6 - Stake");
             System.out.println("0 - Sair");
 
@@ -130,7 +133,7 @@ public class Main {
 
             }
 
-        } while (op_acao != 0);
+        } while (op_acao != 0);  //* Ira sair quando for 0
 
         sc.close();
 

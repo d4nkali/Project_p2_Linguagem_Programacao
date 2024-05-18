@@ -9,7 +9,7 @@ public class Cliente {
     private String nome, email, senha;
     private Date accountCreationDate;
 
-    //* Construtor do Cliente
+    //* Construtor de "Cliente"
     public Cliente(String nome, int cpf, String email, String senha) {
 
         this.numeroPessoa = Cliente.counter; 

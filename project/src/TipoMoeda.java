@@ -1,6 +1,6 @@
 public enum TipoMoeda {
 
-    // Constantes usada para definir o tipo da moeda
+    //? Constantes usadas para definir o tipo da moeda
 
     LASTREAVEL,
     CRIPTOMOEDA;

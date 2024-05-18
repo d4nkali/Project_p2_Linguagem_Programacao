@@ -5,7 +5,7 @@ public class Moedas {
     private String nome_moeda, codigo_moeda;
     public final TipoMoeda tipo;
 
-    //* Construtor de Moedas
+    //* Construtor de "Moedas"
     public Moedas(String nome_moeda, String codigo_moeda, float valor_moeda, TipoMoeda tipo) {
 
         this.nome_moeda = nome_moeda;

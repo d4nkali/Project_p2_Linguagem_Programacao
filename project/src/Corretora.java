@@ -6,7 +6,7 @@ public class Corretora {
     private int numeroConta;
     private Cliente cliente;
 
-    //* Construtor da Conta
+    //* Construtor da "Corretora"
     public Corretora(Cliente cliente){
 
         this.numeroConta = Corretora.accountCounter;
@@ -41,7 +41,7 @@ public class Corretora {
 
     }
 
-        //* Objeto das moedas
+        //* Objeto das Moedas
 
         // Criptomoedas
         Moedas bitcoin = new Moedas("Bitcoin", "BTC", 338941.68f, TipoMoeda.CRIPTOMOEDA);
@@ -49,7 +49,7 @@ public class Corretora {
         Moedas solana  = new Moedas("Solana ", "SOL", 825.20f , TipoMoeda.CRIPTOMOEDA);
         Moedas urubucoin  = new Moedas("Urubu Coin ", "URC",0.110f , TipoMoeda.CRIPTOMOEDA);
 
-    // Moedas
+        // Lastreáveis
         Moedas real = new Moedas("Real", "BRL", 1.00f, TipoMoeda.LASTREAVEL);
         Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.LASTREAVEL);
         Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.LASTREAVEL);
