@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     // Criação das abstrações
-    protected float usd_quant = 0, brl_quant = 0, eur_quant = 0;
+    protected float usd_quant = 0, brl_quant = 0, eur_quant = 0, jpy_quant = 0;
 
     // Variáveis de opção
     private int opcao_moeda_depos;
@@ -42,13 +42,22 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
             this.eur_quant = eur_quant;
         }
 
+        public float getJpy_quant() {
+            return this.jpy_quant;
+        }
+
+        public void setJur_quant(float jpy_quant) {
+            this.jpy_quant = eur_quant;
+        }
+
     //* Construtor filho "CarteiraSpot"
-    public CarteiraSpot(float brl_quant, float usd_quant, float eur_quant) {
+    public CarteiraSpot(float brl_quant, float usd_quant, float eur_quant, float jpy_quant) {
 
         super(0.0f, 0.0f, 0.0f, 0.0f);
         this.brl_quant = brl_quant;
         this.usd_quant = usd_quant;
         this.eur_quant = eur_quant;
+        this.jpy_quant = jpy_quant;
 
     }
 
@@ -57,6 +66,14 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
         System.out.println("Saldo das moedas: ");
         System.out.println("Real: " + brl_quant);
+        System.out.println("Dolar: " + usd_quant);
+        System.out.println("Euro: " + eur_quant);
+        System.out.println("Iene: " + jpy_quant);
+
+        System.out.println("Bitcoin: " + btc_quant);
+        System.out.println("Ethereum: " + eth_quant);
+        System.out.println("Solana: " + sol_quant);
+        System.out.println("Urubu Coin: " + urc_quant);
 
     }
 
