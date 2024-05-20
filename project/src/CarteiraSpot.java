@@ -9,10 +9,10 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     protected float usd_quant = 0, brl_quant = 0, eur_quant = 0, jpy_quant = 0;
 
     // Variáveis de opção
-    private int opcao_moeda_depos;
+    private int opcao_moeda_depos, opcao_moeda_saque, opcao_moeda_transf;
 
     // Variáveis temporárias
-    private float quant_deposito = 0;
+    private float quant_deposito = 0, quant_saque = 0, quant_transferencia = 0;
 
     // Get e Set
 
@@ -111,9 +111,39 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     }
 
-    public void sacar() {
+    public void sacar(Scanner sc) { //* Criando função para sacar as moedas
 
+        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser sacada.");
+        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
+        opcao_moeda_saque= sc.nextInt();
 
+        switch (opcao_moeda_saque) {
+
+            case 1:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                float quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    brl_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+            default:
+
+                System.out.println("Opção Invalida!");
+                break;
+
+        }
 
     }
 
@@ -121,10 +151,10 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
         System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser transferida.");
         System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
-        int opcao_moeda_transf = sc.nextInt();
+        opcao_moeda_transf = sc.nextInt();
     
         System.out.print("Digite a quantia a ser transferida: ");
-        float quant_transferencia = sc.nextFloat();
+        quant_transferencia = sc.nextFloat();
     
         switch (opcao_moeda_transf) {
 

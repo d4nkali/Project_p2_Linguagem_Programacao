@@ -105,6 +105,7 @@ public class Main {
                 case 3:
 
                     System.out.println("Você selecionou: Saque");
+                    cs.sacar(sc);
                     break;
 
                 case 4:
