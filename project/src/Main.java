@@ -23,7 +23,7 @@ public class Main {
             CarteiraSpot cs = new CarteiraSpot(0, 0, 0, 0);
             CarteiraStake ct = new CarteiraStake();
 
-        System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
+        System.out.println("Olá "+ c1.getNome() +"Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
 
         do { //* Loop Login/Cadastro
 
