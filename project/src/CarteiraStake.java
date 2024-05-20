@@ -38,7 +38,66 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_deposito >= 0) {
 
                     btc_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui BRL R$" + btc_quant);
+                    System.out.println("Deposito efetuado. Voce possui BTC R$" + btc_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                System.out.println("Opção Invalida!");
+                
+                break;
+                
+            case 2:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    eth_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui ETH R$" + eth_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 3:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    sol_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui SOL R$" + sol_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 4:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    urc_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui A MELHOR MOEDA DO MUNDO URC R$" + urc_quant);
 
                 }
 
