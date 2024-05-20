@@ -21,7 +21,7 @@ public class Main {
             CarteiraSpot cs = new CarteiraSpot(0, 0, 0, 0);
             CarteiraStake ct = new CarteiraStake();
 
-        System.out.println("Olá "+ c1.getNome() +"Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
+        System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
 
         do { //* Loop Login/Cadastro
 
@@ -75,7 +75,8 @@ public class Main {
 
         do { //* Loop da Tela principal
 
-            System.out.println("Bem-vindo ao Sistema da Corretora");
+            System.out.println();
+            System.out.println("Olá "+ c1.getNome() + "Bem-vindo ao Sistema da Corretora");
             System.out.println("Escolha uma das seguintes opções: ");
 
             System.out.println("1 - Extrato (Spot)");
