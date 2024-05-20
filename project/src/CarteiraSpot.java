@@ -129,6 +129,147 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 }
 
                 break;
+            
+                case 2:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    usd_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+                case 3:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    eur_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+                case 4:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    jpy_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+                case 5:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    btc_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+                case 6:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    eth_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+                case 7:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    sol_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+                case 8:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    urc_quant -= quant_saque;
+                    System.out.println("Saque efetuado na MELHOR MOEDA DE TODA A GALAXIA. Voce sacou BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+
+
+
+
+
+
+
 
             default:
 
