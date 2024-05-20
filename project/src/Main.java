@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-//TODO: Implementar as funções em seus lugares
-
 public class Main {
 
     public static void main(String[] args) throws Exception {

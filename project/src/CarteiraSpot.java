@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-//TODO: Terminar de adicionar todas as moedas na função deposito
-
 public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     // Criação da quantidade de moedas lastreáveis
@@ -269,7 +267,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     usd_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou USD " + usd_quant);
 
                 }
 
@@ -288,7 +286,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     eur_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou EUR " + eur_quant);
 
                 }
 
@@ -307,7 +305,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     jpy_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou JPY" + jpy_quant);
 
                 }
 
@@ -326,7 +324,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     btc_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou BTC R$" + brl_quant);
 
                 }
 
@@ -345,7 +343,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     eth_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou ETH R$" + eth_quant);
 
                 }
 
@@ -364,7 +362,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     sol_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou SOL R$" + sol_quant);
 
                 }
 
