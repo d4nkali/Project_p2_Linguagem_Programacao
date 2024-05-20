@@ -21,6 +21,7 @@ public class Main {
             Scanner sc = new Scanner(System.in);
             Cliente c1 = new Cliente(c_nome, c_cpf, c_email, c_senha);
             CarteiraSpot cs = new CarteiraSpot(0, 0, 0, 0);
+            CarteiraStake ct = new CarteiraStake();
 
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
 
@@ -76,52 +77,84 @@ public class Main {
 
         do { //* Loop da Tela principal
 
-            System.out.println("Bem-vindo ao Sistema de Operações Bancárias");
-            System.out.println("Escolha uma das seguintes opções:");
-            System.out.println("1 - Extrato");
-            System.out.println("2 - Depósito");
-            System.out.println("3 - Saque");
-            System.out.println("4 - Transferência");
-            System.out.println("5 - Conversor de Moedas");
-            System.out.println("6 - Stake");
+            System.out.println("Bem-vindo ao Sistema da Corretora");
+            System.out.println("Escolha uma das seguintes opções: ");
+
+            System.out.println("1 - Extrato (Spot)");
+            System.out.println("2 - Depósito (Spot)");
+            System.out.println("3 - Saque (Spot)");
+            System.out.println("4 - Transferência (Spot)");
+            System.out.println("5 - Conversor de Moedas (Spot)");
+
+            System.out.println("6 - Extrato (Stake)");
+            System.out.println("7 - Depósito (Stake)");
+            System.out.println("8 - Saque (Stake)");
+            System.out.println("9 - Stake (Stake)");
             System.out.println("0 - Sair");
 
+            System.out.println();
+            System.out.print("Opção: ");
             op_acao = sc.nextInt();
 
             switch (op_acao) {
 
                 case 1:
 
-                    System.out.println("Você selecionou: Extrato");
+                    System.out.println("Você selecionou: Extrato (Spot)");
                     cs.extrato();
+                    System.out.println();
                     break;
 
                 case 2:
 
-                    System.out.println("Você selecionou: Depósito");
+                    System.out.println("Você selecionou: Depósito (Spot)");
                     cs.depositar(sc);
+                    System.out.println();
                     break;
 
                 case 3:
 
-                    System.out.println("Você selecionou: Saque");
+                    System.out.println("Você selecionou: Saque (Spot)");
                     cs.sacar(sc);
+                    System.out.println();
                     break;
 
                 case 4:
 
-                    System.out.println("Você selecionou: Transferência");
+                    System.out.println("Você selecionou: Transferência (Spot)");
                     cs.transferir(sc);
+                    System.out.println();
                     break;
 
                 case 5:
 
-                    System.out.println("Você selecionou: Conversor de Moeda");
+                    System.out.println("Você selecionou: Conversor de Moeda (Spot)");
                     break;
 
                 case 6:
 
-                    System.out.println("Você selecionou: Stake");
+                    System.out.println("Você selecionou: Extrato (Stake)");
+                    ct.extrato();
+                    System.out.println();
+                    break;
+
+                case 7:
+
+                    System.out.println("Você selecionou: Deposito (Stake)");
+                    ct.depositar(sc);
+                    System.out.println();
+                    break;
+
+                case 8:
+
+                    System.out.println("Você selecionou: Saque (Stake)");
+                    ct.sacar(sc);
+                    System.out.println();
+                    break;
+
+                case 9:
+
+                    System.out.println("Você selecionou: Stake (Stake)");
                     break;
 
                 case 0:
@@ -132,12 +165,12 @@ public class Main {
                 default:
 
                     System.out.println("Opção inválida. Por favor, selecione uma opção válida.");
+                    System.out.println();
                     break;
 
             }
 
         } while (op_acao != 0);  //* Ira sair quando for 0
-
 
         sc.close(); // Encerra o scanner
 

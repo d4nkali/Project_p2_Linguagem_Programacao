@@ -63,7 +63,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     public void extrato() { //* Criando função para exibir o extrato da carteira
 
         System.out.println("Saldo das moedas: ");
-        System.out.println("BRL = " + brl_quant + " | USD = " + usd_quant + " | EUR = " + eur_quant + " | JPY = " + jpy_quant + " | BTC = " + btc_quant + " | ETH = " + eth_quant + " | SOL = " + sol_quant + " | [8] URC = " + urc_quant);
+        System.out.println("BRL = " + brl_quant + " | USD = " + usd_quant + " | EUR = " + eur_quant + " | JPY = " + jpy_quant + " | BTC = " + btc_quant + " | ETH = " + eth_quant + " | SOL = " + sol_quant + " | URC = " + urc_quant);
 
     }
 
