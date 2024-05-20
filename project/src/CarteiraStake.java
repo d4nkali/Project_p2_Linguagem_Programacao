@@ -85,6 +85,63 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 }
 
                 break;
+            
+            case 2:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    eth_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou ETH R$" + eth_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+
+            case 3:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    sol_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou SOL R$" + sol_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
+                
+            case 4:
+
+                System.out.print("Digite a quantia a ser sacada: ");
+                quant_saque = sc.nextFloat();
+                if (quant_saque >= 0) {
+
+                    urc_quant -= quant_saque;
+                    System.out.println("Saque efetuado. Voce sacou URC R$" +urc_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para sacar.");
+
+                }
+
+                break;
 
             default:
 
