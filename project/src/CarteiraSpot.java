@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 //TODO: Terminar de adicionar todas as moedas na função deposito
-//TODO: Fazer saque @JoaoMagalhaes-hub @Olausz
 
 public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
@@ -83,6 +82,139 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
                     brl_quant += quant_deposito;
                     System.out.println("Deposito efetuado. Voce possui BRL R$" + brl_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 2:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    usd_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui USD R$" + usd_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 3:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    eur_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui EUR R$" + eur_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 4:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    jpy_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui BRL R$" + jpy_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 5:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    btc_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui BTC R$" + btc_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 6:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    eth_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui ETH R$" + eth_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 7:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    sol_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui SOL R$" + sol_quant);
+
+                }
+
+                else {
+
+                    System.out.println("Valor insuficiente para depositar.");
+
+                }
+
+                break;
+
+            case 8:
+
+                System.out.print("Digite a quantia a ser depositada: ");
+                quant_deposito = sc.nextFloat();
+                if (quant_deposito >= 0) {
+
+                    urc_quant += quant_deposito;
+                    System.out.println("Deposito efetuado. Voce possui URC R$" + urc_quant);
 
                 }
 
@@ -251,7 +383,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     urc_quant -= quant_saque;
-                    System.out.println("Saque efetuado na MELHOR MOEDA DE TODA A GALAXIA. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado na MELHOR MOEDA DE TODA A GALAXIA. Voce sacou URC" + urc_quant);
 
                 }
 
@@ -263,14 +395,6 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
                 break;
 
-
-
-
-
-
-
-
-
             default:
 
                 System.out.println("Opção Invalida!");
@@ -280,7 +404,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     }
 
-    public void transferir(Scanner sc) {
+    public void transferir(Scanner sc) { //* Criando função para transferir as moedas
 
         System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser transferida.");
         System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
@@ -360,8 +484,8 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
             if (btc_quant >= quant_transferencia) {
 
                 btc_quant -= quant_transferencia;
-                System.out.println("Transferência efetuada. Seu saldo BITCOIN: " + btc_quant);
-            
+                System.out.println("Transferência efetuada. Seu saldo Bitcoin: " + btc_quant);
+
             } 
 
             else {
