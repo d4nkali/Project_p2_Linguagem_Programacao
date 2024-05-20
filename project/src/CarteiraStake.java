@@ -1,5 +1,8 @@
 import java.util.Scanner;
 
+//TODO: Terminar de adicionar todas as moedas na função deposito
+//TODO: Fazer saque @JoaoMagalhaes-hub @Olausz
+
 public class CarteiraStake extends Carteiras implements AcoesStake {
 
     private int opcao_moeda_depos, opcao_moeda_saque;
