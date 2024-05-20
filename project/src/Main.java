@@ -20,7 +20,7 @@ public class Main {
 
             Scanner sc = new Scanner(System.in);
             Cliente c1 = new Cliente(c_nome, c_cpf, c_email, c_senha);
-            CarteiraSpot cs = new CarteiraSpot(0, 0, 0);
+            CarteiraSpot cs = new CarteiraSpot(0, 0, 0, 0);
 
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
 
@@ -136,7 +136,7 @@ public class Main {
 
         } while (op_acao != 0);  //* Ira sair quando for 0
 
-        sc.close();
+        sc.close(); // Encerra o scanner
 
     }
 

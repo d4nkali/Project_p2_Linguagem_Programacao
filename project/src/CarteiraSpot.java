@@ -1,7 +1,6 @@
 import java.util.Scanner;
 
 //TODO: Terminar de adicionar todas as moedas na função deposito
-//TODO: Fazer extrato @JANzxz @Olausz
 //TODO: Fazer saque @JoaoMagalhaes-hub @Olausz
 //TODO: Fazer transferencia @d4nkali @JANzxz
 
@@ -46,8 +45,8 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
             return this.jpy_quant;
         }
 
-        public void setJur_quant(float jpy_quant) {
-            this.jpy_quant = eur_quant;
+        public void setJpy_quant(float jpy_quant) {
+            this.jpy_quant = jpy_quant;
         }
 
     //* Construtor filho "CarteiraSpot"
@@ -113,8 +112,16 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     }
 
-    public void sacar() {}
+    public void sacar() {
 
-    public void transferir() {}
+
+
+    }
+
+    public void transferir() {
+
+
+
+    }
 
 }
