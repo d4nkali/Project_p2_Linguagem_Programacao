@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
-    // Criação das abstrações
+    // Criação da quantidade de moedas lastreáveis
     protected float usd_quant = 0, brl_quant = 0, eur_quant = 0, jpy_quant = 0;
 
     // Variáveis de opção
@@ -60,18 +60,10 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     }
 
     @Override
-    public void extrato() { //* Criando função para exebir o extrato da carteira
+    public void extrato() { //* Criando função para exibir o extrato da carteira
 
         System.out.println("Saldo das moedas: ");
-        System.out.println("Real: " + brl_quant);
-        System.out.println("Dolar: " + usd_quant);
-        System.out.println("Euro: " + eur_quant);
-        System.out.println("Iene: " + jpy_quant);
-
-        System.out.println("Bitcoin: " + btc_quant);
-        System.out.println("Ethereum: " + eth_quant);
-        System.out.println("Solana: " + sol_quant);
-        System.out.println("Urubu Coin: " + urc_quant);
+        System.out.println("BRL = " + brl_quant + " | USD = " + usd_quant + " | EUR = " + eur_quant + " | JPY = " + jpy_quant + " | BTC = " + btc_quant + " | ETH = " + eth_quant + " | SOL = " + sol_quant + " | [8] URC = " + urc_quant);
 
     }
 
@@ -122,7 +114,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
             case 1:
 
                 System.out.print("Digite a quantia a ser sacada: ");
-                float quant_saque = sc.nextFloat();
+                quant_saque = sc.nextFloat();
                 if (quant_saque >= 0) {
 
                     brl_quant -= quant_saque;
@@ -152,10 +144,10 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
         System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser transferida.");
         System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_transf = sc.nextInt();
-    
+
         System.out.print("Digite a quantia a ser transferida: ");
         quant_transferencia = sc.nextFloat();
-    
+
         switch (opcao_moeda_transf) {
 
             case 1:
@@ -166,21 +158,21 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                     System.out.println("Transferência efetuada. Seu saldo BRL: " + this.brl_quant);
 
                 } 
-                
+
                 else {
 
                     System.out.println("Saldo insuficiente para a transferência! ");
 
                 }
                 break;
-    
+
             case 2:
 
                 if (usd_quant >= quant_transferencia) {
 
                     usd_quant -= quant_transferencia;
                     System.out.println("Transferência efetuada. Seu saldo é de USD: " + usd_quant);
-                
+
                 } 
 
                 else {
@@ -191,60 +183,103 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 break;
 
             case 3:
+
                 if (eur_quant >= quant_transferencia) {
+
                     eur_quant -= quant_transferencia;
                     System.out.println("Transferência efetuada. Seu saldo EUR: " + eur_quant);
-                } else {
+
+                } 
+
+                else {
+
                     System.out.println("Saldo insuficiente para a transferência!");
+
                 }
                 break;
-    
+
             case 4:
+
                 if (jpy_quant >= quant_transferencia) {
+
                     jpy_quant -= quant_transferencia;
                     System.out.println("Transferência efetuada. Seu saldo JPY: " + jpy_quant);
-                } else {
+
+                }
+
+                else {
+
                     System.out.println("Saldo insuficiente para a transferência! ");
+
                 }
                 break;
 
             case 5:
+
             if (btc_quant >= quant_transferencia) {
+
                 btc_quant -= quant_transferencia;
                 System.out.println("Transferência efetuada. Seu saldo BITCOIN: " + btc_quant);
-            } else {
+            
+            } 
+
+            else {
+
                 System.out.println("Saldo insuficiente para a transferência! ");
+
             }
             break;
 
             case 6:
+
             if (eth_quant >= quant_transferencia) {
+
                 eth_quant -= quant_transferencia;
                 System.out.println("Transferência efetuada. Seu saldo Ethereum: " + eth_quant);
-            } else {
+
+            } 
+
+            else {
+
                 System.out.println("Saldo insuficiente para a transferência! ");
+
             }
             break;
 
             case 7:
+
             if (sol_quant >= quant_transferencia) {
+
                 sol_quant -= quant_transferencia;
                 System.out.println("Transferência efetuada. Seu saldo Solana: " + sol_quant);
-            } else {
+
+            } 
+
+            else {
+
                 System.out.println("Saldo insuficiente para a transferência! ");
+
             }
             break;
 
             case 8:
+
             if (urc_quant >= quant_transferencia) {
+
                 urc_quant -= quant_transferencia;
                 System.out.println("Transferência efetuada. Sua incrível carniça da Urubu Coin: " + urc_quant);
-            } else {
+
+            } 
+
+            else {
+
                 System.out.println("Saldo insuficiente para a transferência! ");
+
             }
             break;
-            
+
             default:
+
                 System.out.println("Opção Invalida! ");
                 break;
 
