@@ -7,6 +7,6 @@ public interface AcoesSpot {
     public void extrato();
     public void sacar();
     public void depositar(Scanner sc);
-    public void transferir();
+    public void transferir(Scanner sc);
 
 }

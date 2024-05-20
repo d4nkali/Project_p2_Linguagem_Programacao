@@ -110,6 +110,7 @@ public class Main {
                 case 4:
 
                     System.out.println("Você selecionou: Transferência");
+                    cs.transferir(sc);
                     break;
 
                 case 5:
@@ -135,6 +136,7 @@ public class Main {
             }
 
         } while (op_acao != 0);  //* Ira sair quando for 0
+
 
         sc.close(); // Encerra o scanner
 
