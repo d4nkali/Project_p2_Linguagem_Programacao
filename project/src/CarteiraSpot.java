@@ -2,7 +2,6 @@ import java.util.Scanner;
 
 //TODO: Terminar de adicionar todas as moedas na função deposito
 //TODO: Fazer saque @JoaoMagalhaes-hub @Olausz
-//TODO: Fazer transferencia @d4nkali @JANzxz
 
 public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
@@ -117,33 +116,50 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
 
     }
+
     public void transferir(Scanner sc) {
+
         System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser transferida.");
-        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY");
+        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         int opcao_moeda_transf = sc.nextInt();
     
         System.out.print("Digite a quantia a ser transferida: ");
         float quant_transferencia = sc.nextFloat();
     
         switch (opcao_moeda_transf) {
+
             case 1:
+
                 if (brl_quant >= quant_transferencia) {
+
                     brl_quant -= quant_transferencia;
                     System.out.println("Transferência efetuada. Seu saldo BRL: " + this.brl_quant);
-                } else {
+
+                } 
+                
+                else {
+
                     System.out.println("Saldo insuficiente para a transferência! ");
+
                 }
                 break;
     
             case 2:
+
                 if (usd_quant >= quant_transferencia) {
+
                     usd_quant -= quant_transferencia;
                     System.out.println("Transferência efetuada. Seu saldo é de USD: " + usd_quant);
-                } else {
+                
+                } 
+
+                else {
+
                     System.out.println("Saldo insuficiente para a transferência!");
+
                 }
                 break;
-    
+
             case 3:
                 if (eur_quant >= quant_transferencia) {
                     eur_quant -= quant_transferencia;
@@ -161,7 +177,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                     System.out.println("Saldo insuficiente para a transferência! ");
                 }
                 break;
-           
+
             case 5:
             if (btc_quant >= quant_transferencia) {
                 btc_quant -= quant_transferencia;
@@ -170,7 +186,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 System.out.println("Saldo insuficiente para a transferência! ");
             }
             break;
-                   
+
             case 6:
             if (eth_quant >= quant_transferencia) {
                 eth_quant -= quant_transferencia;
@@ -201,7 +217,9 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
             default:
                 System.out.println("Opção Invalida! ");
                 break;
-            }
+
+        }
+
     }
 
 }
