@@ -8,5 +8,6 @@ public interface AcoesSpot {
     public void sacar(Scanner sc);
     public void depositar(Scanner sc);
     public void transferir(Scanner sc);
+    public void conversor();
 
 }

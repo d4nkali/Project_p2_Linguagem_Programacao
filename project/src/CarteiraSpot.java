@@ -550,4 +550,10 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     }
 
+    public void conversor() {
+
+        
+
+    }
+
 }
