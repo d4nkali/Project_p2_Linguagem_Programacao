@@ -6,10 +6,10 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     protected float usd_quant = 0, brl_quant = 0, eur_quant = 0, jpy_quant = 0;
 
     // Variáveis de opção
-    private int opcao_moeda_depos, opcao_moeda_saque, opcao_moeda_transf;
+    private int opcao_moeda_depos, opcao_moeda_saque, opcao_moeda_transf, opcao_moeda_conversor, opcao_moeda_origem, opcao_moeda_destino;
 
     // Variáveis temporárias
-    private float quant_deposito = 0, quant_saque = 0, quant_transferencia = 0;
+    private float quant_deposito = 0, quant_saque = 0, quant_transferencia = 0, quant_conversor = 0;
 
     // Get e Set
 
@@ -550,9 +550,36 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     }
 
-    public void conversor() {
+    public void conversor(Scanner sc) { //* Criando função para converter as moedas
 
+        System.out.println("Digite o símbolo da moeda de origem.");
+        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY: ");
+        opcao_moeda_origem = sc.nextInt();
+
+        System.out.println("Digite o símbolo da moeda de destino.");
+        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY: ");
+        opcao_moeda_destino = sc.nextInt();
+
+        if (opcao_moeda_origem == opcao_moeda_destino) {
+
+            System.out.println("As moedas para a conversão não podem ser iguais.");
+            return;
+
+        }
+
+        System.out.print("Digite a quantia a ser convertida: ");
+        quant_conversor = sc.nextFloat();
+
+        switch (opcao_moeda_conversor) {
+
+            case 1:
+                
+                break;
         
+            default:
+                break;
+
+        }
 
     }
 
