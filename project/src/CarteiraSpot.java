@@ -11,6 +11,30 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     // Variáveis temporárias
     private float quant_deposito = 0, quant_saque = 0, quant_transferencia = 0, quant_conversor = 0;
 
+    // Taxas de câmbio fixas das moedas lastreáveis
+    private static final float USD_TO_BRL = 5.14f;
+    private static final float USD_TO_EUR = 0.92f;
+    private static final float USD_TO_JPY = 156.96f;
+    private static final float BRL_TO_USD = 1 / USD_TO_BRL;
+    private static final float BRL_TO_EUR = BRL_TO_USD * USD_TO_EUR;
+    private static final float BRL_TO_JPY = BRL_TO_USD * USD_TO_JPY;
+    private static final float EUR_TO_USD = 1 / USD_TO_EUR;
+    private static final float EUR_TO_BRL = 1 / BRL_TO_EUR;
+    private static final float EUR_TO_JPY = EUR_TO_USD * USD_TO_JPY;
+    private static final float JPY_TO_USD = 1 / USD_TO_JPY;
+    private static final float JPY_TO_BRL = 1 / BRL_TO_JPY;
+    private static final float JPY_TO_EUR = 1 / EUR_TO_JPY;
+
+    // Taxas de câmbio fixa para criptomoedas
+    private static final float BTC_TO_BRL = 338941.68f;
+    private static final float ETH_TO_BRL = 15178.67f;
+    private static final float SOL_TO_BRL = 825.20f;
+    private static final float URC_TO_BRL = 0.110f;
+    private static final float BRL_TO_BTC = 1 / BTC_TO_BRL;
+    private static final float BRL_TO_ETH = 1 / ETH_TO_BRL;
+    private static final float BRL_TO_SOL = 1 / SOL_TO_BRL;
+    private static final float BRL_TO_URC = 1 / URC_TO_BRL;
+
     // Get e Set
 
         public float getUsd_quant() {

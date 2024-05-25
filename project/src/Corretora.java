@@ -52,7 +52,7 @@ public class Corretora {
         // Lastreáveis
         Moedas real = new Moedas("Real", "BRL", 1.00f, TipoMoeda.LASTREAVEL);
         Moedas euro = new Moedas("Euro", "EUR", 5.58f, TipoMoeda.LASTREAVEL);
-        Moedas dolar = new Moedas("Dólar", "USD", 5.13f, TipoMoeda.LASTREAVEL);
+        Moedas dolar = new Moedas("Dólar", "USD", 5.14f, TipoMoeda.LASTREAVEL);
         Moedas iene = new Moedas("Iene", "JPY", 0.033f, TipoMoeda.LASTREAVEL);
 
 }
