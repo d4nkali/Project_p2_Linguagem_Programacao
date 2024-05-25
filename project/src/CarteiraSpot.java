@@ -67,7 +67,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     public void depositar(Scanner sc) { //* Criando função para depositar as moedas
 
         System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser depositada.");
-        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
+        System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_depos = sc.nextInt();
 
         switch (opcao_moeda_depos) {
@@ -236,7 +236,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     public void sacar(Scanner sc) { //* Criando função para sacar as moedas
 
         System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser sacada.");
-        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
+        System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_saque= sc.nextInt();
 
         switch (opcao_moeda_saque) {
@@ -405,7 +405,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     public void transferir(Scanner sc) { //* Criando função para transferir as moedas
 
         System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser transferida.");
-        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
+        System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_transf = sc.nextInt();
 
         System.out.print("Digite a quantia a ser transferida: ");
@@ -553,11 +553,11 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
     public void conversor(Scanner sc) { //* Criando função para converter as moedas
 
         System.out.println("Digite o símbolo da moeda de origem.");
-        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY: ");
+        System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_origem = sc.nextInt();
 
         System.out.println("Digite o símbolo da moeda de destino.");
-        System.out.println("[1] BRL | [2] USD | [3] EUR | [4] JPY: ");
+        System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_destino = sc.nextInt();
 
         if (opcao_moeda_origem == opcao_moeda_destino) {
