@@ -1,4 +1,5 @@
 import java.util.Scanner;
+import java.util.ArrayList;
 
 public class Main {
 
@@ -20,6 +21,7 @@ public class Main {
             Cliente c1 = new Cliente(c_nome, c_cpf, c_email, c_senha);
             CarteiraSpot cs = new CarteiraSpot(0, 0, 0, 0);
             CarteiraStake ct = new CarteiraStake();
+            ArrayList<String> nome_log = new ArrayList<>();
 
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
         System.out.println();
@@ -57,6 +59,7 @@ public class Main {
 
                     System.out.print("Digite o seu nome: ");
                     c_nome = sc.next();
+                    nome_log.add(c_nome);
                     c1.setNome(c_nome);
                     System.out.print("Digite o seu CPF: ");
                     c_cpf = sc.nextInt();
@@ -91,6 +94,8 @@ public class Main {
             System.out.println("7 - Depósito (Stake)");
             System.out.println("8 - Saque (Stake)");
             System.out.println("9 - Stake (Stake)");
+
+            System.out.println("10 - Lista de Nomes Cadastrados");
             System.out.println("0 - Sair");
 
             System.out.println();
@@ -159,6 +164,15 @@ public class Main {
 
                     System.out.println("Você selecionou: Stake (Stake)");
                     ct.stake(sc);
+                    System.out.println();
+                    break;
+
+                case 10: 
+
+                    System.out.println("Você selecionou: Lista de Nomes Cadastrados");
+                    for (String nl : nome_log) {
+                        System.out.println(nl);
+                    }
                     System.out.println();
                     break;
 
