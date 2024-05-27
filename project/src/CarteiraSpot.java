@@ -856,15 +856,254 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
                 }
                 break;
+                case 5: // BTC
+                    if (btc_quant >= quant_conversor) {
+                    switch (opcao_moeda_destino) {
+                        case 1: // BTC para BRL
+                            
+                            quant_convertido = quant_conversor * BTC_TO_BRL;
+                            btc_quant -= quant_conversor;
+                            brl_quant += quant_convertido;
+                            break;
 
+                        case 2: // BTC para USD
+                            
+                            quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_USD;
+                            btc_quant -= quant_conversor;
+                            usd_quant += quant_convertido;
+                            break;
+                        case 3: // BTC para EUR
+
+                            quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_EUR;
+                            btc_quant -= quant_conversor;
+                            eur_quant += quant_convertido;
+                            break;
+
+                        case 4: // BTC para JPY
+
+                            quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_JPY;
+                            btc_quant -= quant_conversor;
+                            jpy_quant += quant_convertido;
+                            break;
+
+                        case 6: // BTC para ETH
+
+                            quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_ETH;
+                            btc_quant -= quant_conversor;
+                            eth_quant += quant_convertido;
+                            break;
+
+                        case 7: // BTC para SOL
+
+                            quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_SOL;
+                            btc_quant -= quant_conversor;
+                            sol_quant += quant_convertido;
+                            break;
+
+                        case 8: // BTC para URC
+
+                            quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_URC;
+                            btc_quant -= quant_conversor;
+                            urc_quant += quant_convertido;
+                            break;
+                    }
+                } else {
+                    System.out.println("Saldo insuficiente para a conversão!");
+                    return;
+                }
+                break;
+                case 6: // ETH
+                if (eth_quant >= quant_conversor) {
+                    switch (opcao_moeda_destino) {
+                        case 1: // ETH para BRL
+
+                            quant_convertido = quant_conversor * ETH_TO_BRL;
+                            eth_quant -= quant_conversor;
+                            brl_quant += quant_convertido;
+                            break;
+
+                        case 2: // ETH para USD
+
+                            quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_USD;
+                            eth_quant -= quant_conversor;
+                            usd_quant += quant_convertido;
+                            break;
+
+                        case 3: // ETH para EUR
+
+                            quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_EUR;
+                            eth_quant -= quant_conversor;
+                            eur_quant += quant_convertido;
+                            break;
+
+                        case 4: // ETH para JPY
+                        
+                            quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_JPY;
+                            eth_quant -= quant_conversor;
+                            jpy_quant += quant_convertido;
+                            break;
+
+                        case 5: // ETH para BTC
+
+                            quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_BTC;
+                            eth_quant -= quant_conversor;
+                            btc_quant += quant_convertido;
+                            break;
+
+                        case 7: // ETH para SOL
+
+                            quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_SOL;
+                            eth_quant -= quant_conversor;
+                            sol_quant += quant_convertido;
+                            break;
+
+                        case 8: // ETH para 
+                        
+                            quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_URC;
+                            eth_quant -= quant_conversor;
+                            urc_quant += quant_convertido;
+                            break;
+
+                    }
+                } else {
+
+                    System.out.println("Saldo insuficiente para a conversão!");
+                    return;
+
+                }
+                break;
+
+                case 7: // SOL
+
+                if (sol_quant >= quant_conversor) {
+                    switch (opcao_moeda_destino) {
+                        case 1: // SOL para BRL
+
+                            quant_convertido = quant_conversor * SOL_TO_BRL;
+                            sol_quant -= quant_conversor;
+                            brl_quant += quant_convertido;
+                            break;
+
+                        case 2: // SOL para 
+                        
+                            quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_USD;
+                            sol_quant -= quant_conversor;
+                            usd_quant += quant_convertido;
+                            break;
+
+                        case 3: // SOL para EUR
+
+                            quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_EUR;
+                            sol_quant -= quant_conversor;
+                            eur_quant += quant_convertido;
+                            break;
+                            
+                        case 4: // SOL para JPY
+
+                            quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_JPY;
+                            sol_quant -= quant_conversor;
+                            jpy_quant += quant_convertido;
+                            break;
+
+                        case 5: // SOL para BTC
+
+                            quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_BTC;
+                            sol_quant -= quant_conversor;
+                            btc_quant += quant_convertido;
+                            break;
+
+                        case 6: // SOL para ETH
+
+                            quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_ETH;
+                            sol_quant -= quant_conversor;
+                            eth_quant += quant_convertido;
+                            break;
+                            
+                        case 8: // SOL para URC
+
+                            quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_URC;
+                            sol_quant -= quant_conversor;
+                            urc_quant += quant_convertido;
+                            break;
+
+                    }
+                } else {
+
+                    System.out.println("Saldo insuficiente para a conversão!");
+                    return;
+                }
+                break;
+
+                case 8: // URC
+                
+                if (urc_quant >= quant_conversor) {
+                    switch (opcao_moeda_destino) {
+                        case 1: // URC para BRL
+
+                            quant_convertido = quant_conversor * URC_TO_BRL;
+                            urc_quant -= quant_conversor;
+                            brl_quant += quant_convertido;
+                            break;
+
+                        case 2: // URC para 
+                        
+                            quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_USD;
+                            urc_quant -= quant_conversor;
+                            usd_quant += quant_convertido;
+                            break;
+
+                        case 3: // URC para EUR
+
+                            quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_EUR;
+                            urc_quant -= quant_conversor;
+                            eur_quant += quant_convertido;
+                            break;
+
+                        case 4: // URC para JPY
+
+                            quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_JPY;
+                            urc_quant -= quant_conversor;
+                            jpy_quant += quant_convertido;
+                            break;
+
+                        case 5: // URC para BTC
+
+                            quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_BTC;
+                            urc_quant -= quant_conversor;
+                            btc_quant += quant_convertido;
+                            break;
+
+                        case 6: // URC para ETH
+
+                            quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_ETH;
+                            urc_quant -= quant_conversor;
+                            eth_quant += quant_convertido;
+                            break;
+
+                        case 7: // URC para SOL
+
+                            quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_SOL;
+                            urc_quant -= quant_conversor;
+                            sol_quant += quant_convertido;
+                            break;
+                            
+                    }
+                } else {
+                    System.out.println("Saldo insuficiente para a conversão!");
+                    return;
+                }
+                break;
+                        
             
-
-        }
-
+            }
         System.out.println("Conversão realizada com sucesso!");
         System.out.println("Quantia convertida: " + quant_conversor);
         System.out.println("Valor convertido: " + quant_convertido);
-
     }
+ }
 
-}
+
+
+    
+
+
