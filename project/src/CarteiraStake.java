@@ -210,8 +210,52 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
 
     public void stake(Scanner sc) {
 
+        System.out.println("Digite a quantidade para investir no stake");
+        float quant_stake = sc.nextFloat();
+        System.out.println("Selecione a quantidade de meses para o investimento");
+        System.out.println("[1] 1 mês | [2] 3 mesês | [3] 6 mesês | [4] 1 ano");
+        int quant_meses = sc.nextInt();
+
+        switch (quant_meses) {
+            case 1:
+
+                float investimento1 = quant_stake * 0.01f;
+
+                System.out.println("Parabéns! seu lucro foi de "+ investimento1);
+                
+                break;
+
+            case 2:
+                
+                float investimento2 = quant_stake * 0.03f;
+
+                System.out.println("Parabéns! seu lucro foi de "+ investimento2);
+
+                break;
+
+            case 3:
+
+                float investimento3 = quant_stake * 0.06f;
+
+                System.out.println("Parabéns! seu lucro foi de "+ investimento3);
+
+                break;
+
+            case 4:
+
+                float investimento4 = quant_stake * 0.09f;
+
+                System.out.println("Parabéns! seu lucro foi de "+ investimento4);
+
+                break;
+
+            default:
+
+                System.out.println("Opção invalida");
         
 
     }
+
+ }
 
 }
