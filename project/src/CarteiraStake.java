@@ -208,7 +208,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
 
     }
 
-    public void stake() {
+    public void stake(Scanner sc) {
 
         
 

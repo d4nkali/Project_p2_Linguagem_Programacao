@@ -22,6 +22,7 @@ public class Main {
             CarteiraStake ct = new CarteiraStake();
 
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
+        System.out.println();
 
         do { //* Loop Login/Cadastro
 
@@ -56,6 +57,7 @@ public class Main {
 
                     System.out.print("Digite o seu nome: ");
                     c_nome = sc.next();
+                    c1.setNome(c_nome);
                     System.out.print("Digite o seu CPF: ");
                     c_cpf = sc.nextInt();
                     System.out.print("Digite um endereço de email: ");
@@ -76,7 +78,7 @@ public class Main {
         do { //* Loop da Tela principal
 
             System.out.println();
-            System.out.println("Olá "+ c1.getNome() + "Bem-vindo ao Sistema da Corretora");
+            System.out.println("Olá "+ c1.getNome() + " | Bem-vindo ao Sistema da Corretora");
             System.out.println("Escolha uma das seguintes opções: ");
 
             System.out.println("1 - Extrato (Spot)");
@@ -128,6 +130,8 @@ public class Main {
                 case 5:
 
                     System.out.println("Você selecionou: Conversor de Moeda (Spot)");
+                    cs.conversor(sc);
+                    System.out.println();
                     break;
 
                 case 6:
@@ -154,6 +158,8 @@ public class Main {
                 case 9:
 
                     System.out.println("Você selecionou: Stake (Stake)");
+                    ct.stake(sc);
+                    System.out.println();
                     break;
 
                 case 0:
