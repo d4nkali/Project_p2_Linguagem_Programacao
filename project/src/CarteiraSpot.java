@@ -727,6 +727,138 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 }
             break;
 
+            case 3: // Caso for Euro
+                if (eur_quant >= quant_conversor) {
+                    switch (opcao_moeda_destino) {
+
+                        case 1: // Euro para Real
+
+                            quant_convertido = quant_conversor * EUR_TO_BRL;
+                            eur_quant -= quant_conversor;
+                            brl_quant += quant_convertido;
+                            break;
+
+                        case 2: // Euro para Dólar
+
+                            quant_convertido = quant_conversor * EUR_TO_USD;
+                            eur_quant -= quant_conversor;
+                            usd_quant += quant_convertido;
+                            break;
+
+                        case 4: // Euro para Iene
+
+                            quant_convertido = quant_conversor * EUR_TO_JPY;
+                            eur_quant -= quant_conversor;
+                            jpy_quant += quant_convertido;
+                            break;
+
+                        case 5: // Euro para Bitcoin
+
+                            quant_convertido = (quant_conversor * EUR_TO_BRL) * BRL_TO_BTC;
+                            eur_quant -= quant_conversor;
+                            btc_quant += quant_convertido;
+                            break;
+
+                        case 6: // Euro para Ethereum
+
+                            quant_convertido = (quant_conversor * EUR_TO_BRL) * BRL_TO_ETH;
+                            eur_quant -= quant_conversor;
+                            eth_quant += quant_convertido;
+                            break;
+
+                        case 7: // Euro para Solana
+
+                            quant_convertido = (quant_conversor * EUR_TO_BRL) * BRL_TO_SOL;
+                            eur_quant -= quant_conversor;
+                            sol_quant += quant_convertido;
+                            break;
+
+                        case 8: // EUR para URC
+
+                            quant_convertido = (quant_conversor * EUR_TO_BRL) * BRL_TO_URC;
+                            eur_quant -= quant_conversor;
+                            urc_quant += quant_convertido;
+                            break;
+
+                    }
+
+                } 
+                
+                else {
+
+                    System.out.println("Saldo insuficiente para a conversão!");
+                    return;
+
+                }
+                break;
+
+            case 4: // Caso for Iene Japonês
+                if (jpy_quant >= quant_conversor) {
+                    switch (opcao_moeda_destino) {
+
+                        case 1: // Iene para Real
+
+                            quant_convertido = quant_conversor * JPY_TO_BRL;
+                            jpy_quant -= quant_conversor;
+                            brl_quant += quant_convertido;
+                            break;
+
+                        case 2: // Iene para Dólar
+
+                            quant_convertido = quant_conversor * JPY_TO_USD;
+                            jpy_quant -= quant_conversor;
+                            usd_quant += quant_convertido;
+                            break;
+
+                        case 3: // Iene para Euro
+
+                            quant_convertido = quant_conversor * JPY_TO_EUR;
+                            jpy_quant -= quant_conversor;
+                            eur_quant += quant_convertido;
+                            break;
+
+                        case 5: // Iene para Bitcoin
+
+                            quant_convertido = (quant_conversor * JPY_TO_BRL) * BRL_TO_BTC;
+                            jpy_quant -= quant_conversor;
+                            btc_quant += quant_convertido;
+                            break;
+
+                        case 6: // Iene para Ethereum
+
+                            quant_convertido = (quant_conversor * JPY_TO_BRL) * BRL_TO_ETH;
+                            jpy_quant -= quant_conversor;
+                            eth_quant += quant_convertido;
+                            break;
+
+                        case 7: // Iene para Solana
+
+                            quant_convertido = (quant_conversor * JPY_TO_BRL) * BRL_TO_SOL;
+                            jpy_quant -= quant_conversor;
+                            sol_quant += quant_convertido;
+                            break;
+
+                        case 8: // Iene para Urubu Coin
+
+                            quant_convertido = (quant_conversor * JPY_TO_BRL) * BRL_TO_URC;
+                            jpy_quant -= quant_conversor;
+                            urc_quant += quant_convertido;
+                            break;
+
+                    }
+
+                } 
+
+                else {
+
+                    System.out.println("Saldo insuficiente para a conversão!");
+                    return;
+
+                }
+                break;
+
+            
+
         }
 
         System.out.println("Conversão realizada com sucesso!");
