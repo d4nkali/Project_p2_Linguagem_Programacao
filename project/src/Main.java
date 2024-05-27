@@ -21,7 +21,7 @@ public class Main {
             Cliente c1 = new Cliente(c_nome, c_cpf, c_email, c_senha);
             CarteiraSpot cs = new CarteiraSpot(0, 0, 0, 0);
             CarteiraStake ct = new CarteiraStake();
-            ArrayList<String> nome_log = new ArrayList<>();
+            ArrayList<String> creditos = new ArrayList<>();
 
         System.out.println("Bem vindo a Vulture Trades - A Carniça da Blockchain \n");
         System.out.println();
@@ -59,7 +59,6 @@ public class Main {
 
                     System.out.print("Digite o seu nome: ");
                     c_nome = sc.next();
-                    nome_log.add(c_nome);
                     c1.setNome(c_nome);
                     System.out.print("Digite o seu CPF: ");
                     c_cpf = sc.nextInt();
@@ -95,7 +94,7 @@ public class Main {
             System.out.println("8 - Saque (Stake)");
             System.out.println("9 - Stake (Stake)");
 
-            System.out.println("10 - Lista de Nomes Cadastrados");
+            System.out.println("10 - Créditos");
             System.out.println("0 - Sair");
 
             System.out.println();
@@ -169,9 +168,12 @@ public class Main {
 
                 case 10: 
 
-                    System.out.println("Você selecionou: Lista de Nomes Cadastrados");
-                    for (String nl : nome_log) {
-                        System.out.println(nl);
+                    System.out.println("Você selecionou: Créditos");
+                    creditos.add("Danilo Pereira"); creditos.add("João Gabriel"); creditos.add("João Vitor"); creditos.add("Saulo Pinto");
+                    for (String cr : creditos) {
+
+                        System.out.println(cr);
+
                     }
                     System.out.println();
                     break;

@@ -27,7 +27,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
 
     public void depositar(Scanner sc) { //* Criando função para depositar as moedas
 
-        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser depositada.");
+        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser depositada. Digite o símbolo da moeda de origem. OBS: Utilize ',' ao invés de '.'");
         System.out.print("[1] BTC | [2] ETH | [3] SOL | [4] URC: ");
         opcao_moeda_depos = sc.nextInt();
 
@@ -40,7 +40,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_deposito >= 0) {
 
                     btc_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui BTC R$" + btc_quant);
+                    System.out.println("Deposito efetuado. Voce possui BTC " + btc_quant);
 
                 }
 
@@ -60,7 +60,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_deposito >= 0) {
 
                     eth_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui ETH R$" + eth_quant);
+                    System.out.println("Deposito efetuado. Voce possui ETH " + eth_quant);
 
                 }
 
@@ -79,7 +79,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_deposito >= 0) {
 
                     sol_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui SOL R$" + sol_quant);
+                    System.out.println("Deposito efetuado. Voce possui SOL " + sol_quant);
 
                 }
 
@@ -98,7 +98,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_deposito >= 0) {
 
                     urc_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui A MELHOR MOEDA DO MUNDO URC R$" + urc_quant);
+                    System.out.println("Deposito efetuado. Voce possui A MELHOR MOEDA DO MUNDO URC " + urc_quant);
 
                 }
 
@@ -121,7 +121,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
 
     public void sacar(Scanner sc) { //* Criando função para sacar as moedas
 
-        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser sacada.");
+        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser sacada. Digite o símbolo da moeda de origem. OBS: Utilize ',' ao invés de '.'");
         System.out.print("[1] BTC | [2] ETH | [3] SOL | [4] URC: ");
         opcao_moeda_saque= sc.nextInt();
 
@@ -134,7 +134,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_saque >= 0) {
 
                     btc_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BTC R$" + btc_quant);
+                    System.out.println("Saque efetuado. Voce sacou BTC " + btc_quant);
 
                 }
 
@@ -153,7 +153,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_saque >= 0) {
 
                     eth_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou ETH R$" + eth_quant);
+                    System.out.println("Saque efetuado. Voce sacou ETH " + eth_quant);
 
                 }
 
@@ -172,7 +172,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_saque >= 0) {
 
                     sol_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou SOL R$" + sol_quant);
+                    System.out.println("Saque efetuado. Voce sacou SOL " + sol_quant);
 
                 }
 
@@ -191,7 +191,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
                 if (quant_saque >= 0) {
 
                     urc_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou URC R$" +urc_quant);
+                    System.out.println("Saque efetuado. Voce sacou URC " +urc_quant);
 
                 }
 
@@ -214,7 +214,7 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
 
     public void stake(Scanner sc) { //* Criando função para simulação do stake
 
-        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser simulada para o stake.");
+        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser simulada para o stake. Digite o símbolo da moeda de origem. OBS: Utilize ',' ao invés de '.'");
         System.out.print("[1] BTC | [2] ETH | [3] SOL | [4] URC: ");
         opcao_moeda_stake = sc.nextInt();
         System.out.println();

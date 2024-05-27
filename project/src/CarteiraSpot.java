@@ -90,7 +90,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     public void depositar(Scanner sc) { //* Criando função para depositar as moedas
 
-        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser depositada.");
+        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser depositada. OBS: Utilize ',' ao invés de '.'");
         System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_depos = sc.nextInt();
 
@@ -103,7 +103,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     brl_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui BRL R$" + brl_quant);
+                    System.out.println("Deposito efetuado. Voce possui BRL " + brl_quant);
 
                 }
 
@@ -122,7 +122,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     usd_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui USD R$" + usd_quant);
+                    System.out.println("Deposito efetuado. Voce possui USD " + usd_quant);
 
                 }
 
@@ -141,7 +141,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     eur_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui EUR R$" + eur_quant);
+                    System.out.println("Deposito efetuado. Voce possui EUR " + eur_quant);
 
                 }
 
@@ -160,7 +160,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     jpy_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui JPY R$" + jpy_quant);
+                    System.out.println("Deposito efetuado. Voce possui JPY " + jpy_quant);
 
                 }
 
@@ -179,7 +179,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     btc_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui BTC R$" + btc_quant);
+                    System.out.println("Deposito efetuado. Voce possui BTC " + btc_quant);
 
                 }
 
@@ -198,7 +198,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     eth_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui ETH R$" + eth_quant);
+                    System.out.println("Deposito efetuado. Voce possui ETH " + eth_quant);
 
                 }
 
@@ -217,7 +217,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     sol_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui SOL R$" + sol_quant);
+                    System.out.println("Deposito efetuado. Voce possui SOL " + sol_quant);
 
                 }
 
@@ -236,7 +236,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     urc_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui URC R$" + urc_quant);
+                    System.out.println("Deposito efetuado. Voce possui URC " + urc_quant);
 
                 }
 
@@ -259,7 +259,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     public void sacar(Scanner sc) { //* Criando função para sacar as moedas
 
-        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser sacada.");
+        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser sacada. OBS: Utilize ',' ao invés de '.'");
         System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_saque= sc.nextInt();
 
@@ -272,7 +272,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     brl_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BRL R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou BRL " + brl_quant);
 
                 }
 
@@ -348,7 +348,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     btc_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou BTC R$" + brl_quant);
+                    System.out.println("Saque efetuado. Voce sacou BTC " + brl_quant);
 
                 }
 
@@ -367,7 +367,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     eth_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou ETH R$" + eth_quant);
+                    System.out.println("Saque efetuado. Voce sacou ETH " + eth_quant);
 
                 }
 
@@ -386,7 +386,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     sol_quant -= quant_saque;
-                    System.out.println("Saque efetuado. Voce sacou SOL R$" + sol_quant);
+                    System.out.println("Saque efetuado. Voce sacou SOL " + sol_quant);
 
                 }
 
@@ -405,7 +405,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_saque >= 0) {
 
                     urc_quant -= quant_saque;
-                    System.out.println("Saque efetuado na MELHOR MOEDA DE TODA A GALAXIA. Voce sacou URC" + urc_quant);
+                    System.out.println("Saque efetuado na MELHOR MOEDA DE TODA A GALAXIA. Voce sacou URC " + urc_quant);
 
                 }
 
@@ -428,7 +428,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     public void transferir(Scanner sc) { //* Criando função para transferir as moedas
 
-        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser transferida.");
+        System.out.println("Digite o simbolo da moeda/criptomoeda que vai ser transferida. OBS: Utilize ',' ao invés de '.'");
         System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_transf = sc.nextInt();
 
@@ -576,7 +576,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
     public void conversor(Scanner sc) { //* Criando função para converter as moedas
 
-        System.out.println("Digite o símbolo da moeda de origem.");
+        System.out.println("Digite o símbolo da moeda de origem. OBS: Utilize ',' ao invés de '.'");
         System.out.print("[1] BRL | [2] USD | [3] EUR | [4] JPY | [5] BTC | [6] ETH | [7] SOL | [8] URC: ");
         opcao_moeda_origem = sc.nextInt();
 
