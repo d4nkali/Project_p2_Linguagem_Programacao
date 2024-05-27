@@ -228,27 +228,28 @@ public class CarteiraStake extends Carteiras implements AcoesStake {
         quant_stake = sc.nextFloat();
         System.out.println();
 
+        //* Calcula o rendimento com base na escolha dos meses
         switch (quant_meses) {
 
-            case 1:
+            case 1: // Se for 1 mês
 
                 rendi_stake = quant_stake * 0.001f;
                 System.out.println("Rendimento estimado para 1 mês é de " + rendi_stake);
                 break;
 
-            case 2:
+            case 2: // Se for 3 meses
 
                 rendi_stake = quant_stake * 0.003f;
                 System.out.println("Rendimento estimado para 3 meses é de " + rendi_stake);
                 break;
 
-            case 3:
+            case 3: // Se for 6 meses
 
                 rendi_stake = quant_stake * 0.006f;
                 System.out.println("Rendimento estimado para 6 meses é de " + rendi_stake);
                 break;
 
-            case 4:
+            case 4: // Se for 1 ano
 
                 rendi_stake = quant_stake * 0.009f;
                 System.out.println("Rendimento estimado para 1 ano é de " + rendi_stake);
