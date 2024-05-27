@@ -160,7 +160,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 if (quant_deposito >= 0) {
 
                     jpy_quant += quant_deposito;
-                    System.out.println("Deposito efetuado. Voce possui BRL R$" + jpy_quant);
+                    System.out.println("Deposito efetuado. Voce possui JPY R$" + jpy_quant);
 
                 }
 
@@ -283,7 +283,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 }
 
                 break;
-            
+
             case 2:
 
                 System.out.print("Digite a quantia a ser sacada: ");
@@ -773,7 +773,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                             sol_quant += quant_convertido;
                             break;
 
-                        case 8: // EUR para URC
+                        case 8: // Euro para Urubu Coin
 
                             quant_convertido = (quant_conversor * EUR_TO_BRL) * BRL_TO_URC;
                             eur_quant -= quant_conversor;
@@ -783,7 +783,7 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                     }
 
                 } 
-                
+
                 else {
 
                     System.out.println("Saldo insuficiente para a conversão!");
@@ -856,116 +856,130 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
 
                 }
                 break;
-                case 5: // BTC
+
+                case 5: // Caso for Bitcoin
                     if (btc_quant >= quant_conversor) {
                     switch (opcao_moeda_destino) {
-                        case 1: // BTC para BRL
-                            
+
+                        case 1: // Bitcoin para Real
+
                             quant_convertido = quant_conversor * BTC_TO_BRL;
                             btc_quant -= quant_conversor;
                             brl_quant += quant_convertido;
                             break;
 
-                        case 2: // BTC para USD
+                        case 2: // Bitcoin para Dólar
                             
                             quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_USD;
                             btc_quant -= quant_conversor;
                             usd_quant += quant_convertido;
                             break;
-                        case 3: // BTC para EUR
+
+                        case 3: // Bitcoin para Euro
 
                             quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_EUR;
                             btc_quant -= quant_conversor;
                             eur_quant += quant_convertido;
                             break;
 
-                        case 4: // BTC para JPY
+                        case 4: // Bitcoin para Iene
 
                             quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_JPY;
                             btc_quant -= quant_conversor;
                             jpy_quant += quant_convertido;
                             break;
 
-                        case 6: // BTC para ETH
+                        case 6: // Bitcoin para Ethereum
 
                             quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_ETH;
                             btc_quant -= quant_conversor;
                             eth_quant += quant_convertido;
                             break;
 
-                        case 7: // BTC para SOL
+                        case 7: // Bitcoin para Solana
 
                             quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_SOL;
                             btc_quant -= quant_conversor;
                             sol_quant += quant_convertido;
                             break;
 
-                        case 8: // BTC para URC
+                        case 8: // Bitcoin para Urubu Coin
 
                             quant_convertido = (quant_conversor * BTC_TO_BRL) * BRL_TO_URC;
                             btc_quant -= quant_conversor;
                             urc_quant += quant_convertido;
                             break;
+
                     }
-                } else {
+
+                } 
+
+                else {
+
                     System.out.println("Saldo insuficiente para a conversão!");
                     return;
+
                 }
                 break;
-                case 6: // ETH
+
+                case 6: // Caso for Ethereum
                 if (eth_quant >= quant_conversor) {
                     switch (opcao_moeda_destino) {
-                        case 1: // ETH para BRL
+
+                        case 1: // Ethereum para Real
 
                             quant_convertido = quant_conversor * ETH_TO_BRL;
                             eth_quant -= quant_conversor;
                             brl_quant += quant_convertido;
                             break;
 
-                        case 2: // ETH para USD
+                        case 2: // Ethereum para Dólar
 
                             quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_USD;
                             eth_quant -= quant_conversor;
                             usd_quant += quant_convertido;
                             break;
 
-                        case 3: // ETH para EUR
+                        case 3: // Ethereum para Euro
 
                             quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_EUR;
                             eth_quant -= quant_conversor;
                             eur_quant += quant_convertido;
                             break;
 
-                        case 4: // ETH para JPY
+                        case 4: // Ethereum para Iene
                         
                             quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_JPY;
                             eth_quant -= quant_conversor;
                             jpy_quant += quant_convertido;
                             break;
 
-                        case 5: // ETH para BTC
+                        case 5: // Ethereum para Bitcoin
 
                             quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_BTC;
                             eth_quant -= quant_conversor;
                             btc_quant += quant_convertido;
                             break;
 
-                        case 7: // ETH para SOL
+                        case 7: // Ethereum para Solana
 
                             quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_SOL;
                             eth_quant -= quant_conversor;
                             sol_quant += quant_convertido;
                             break;
 
-                        case 8: // ETH para 
-                        
+                        case 8: // ETH para Urubu Coin
+
                             quant_convertido = (quant_conversor * ETH_TO_BRL) * BRL_TO_URC;
                             eth_quant -= quant_conversor;
                             urc_quant += quant_convertido;
                             break;
 
                     }
-                } else {
+
+                } 
+
+                else {
 
                     System.out.println("Saldo insuficiente para a conversão!");
                     return;
@@ -973,53 +987,54 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                 }
                 break;
 
-                case 7: // SOL
+                case 7: // Caso for Solana
 
                 if (sol_quant >= quant_conversor) {
                     switch (opcao_moeda_destino) {
-                        case 1: // SOL para BRL
+
+                        case 1: // Solana para Real
 
                             quant_convertido = quant_conversor * SOL_TO_BRL;
                             sol_quant -= quant_conversor;
                             brl_quant += quant_convertido;
                             break;
 
-                        case 2: // SOL para 
+                        case 2: // Solana para Dólar
                         
                             quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_USD;
                             sol_quant -= quant_conversor;
                             usd_quant += quant_convertido;
                             break;
 
-                        case 3: // SOL para EUR
+                        case 3: // Solana para Euro
 
                             quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_EUR;
                             sol_quant -= quant_conversor;
                             eur_quant += quant_convertido;
                             break;
                             
-                        case 4: // SOL para JPY
+                        case 4: // Solana para Iene
 
                             quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_JPY;
                             sol_quant -= quant_conversor;
                             jpy_quant += quant_convertido;
                             break;
 
-                        case 5: // SOL para BTC
+                        case 5: // Solana para Bitcoin
 
                             quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_BTC;
                             sol_quant -= quant_conversor;
                             btc_quant += quant_convertido;
                             break;
 
-                        case 6: // SOL para ETH
+                        case 6: // Solana para Ethereum
 
                             quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_ETH;
                             sol_quant -= quant_conversor;
                             eth_quant += quant_convertido;
                             break;
                             
-                        case 8: // SOL para URC
+                        case 8: // Solana para Urubu Coin
 
                             quant_convertido = (quant_conversor * SOL_TO_BRL) * BRL_TO_URC;
                             sol_quant -= quant_conversor;
@@ -1027,83 +1042,89 @@ public class CarteiraSpot extends Carteiras implements AcoesSpot {
                             break;
 
                     }
-                } else {
+
+                } 
+
+                else {
 
                     System.out.println("Saldo insuficiente para a conversão!");
                     return;
+
                 }
                 break;
 
-                case 8: // URC
-                
+                case 8: // Caso for A MELHOR MOEDA DO UNIVERSO O URUBU COIN
+
                 if (urc_quant >= quant_conversor) {
                     switch (opcao_moeda_destino) {
-                        case 1: // URC para BRL
+
+                        case 1: // Urubu Coin para Real
 
                             quant_convertido = quant_conversor * URC_TO_BRL;
                             urc_quant -= quant_conversor;
                             brl_quant += quant_convertido;
                             break;
 
-                        case 2: // URC para 
+                        case 2: // Urubu Coin para Dólar
                         
                             quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_USD;
                             urc_quant -= quant_conversor;
                             usd_quant += quant_convertido;
                             break;
 
-                        case 3: // URC para EUR
+                        case 3: // Urubu Coin para Euro
 
                             quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_EUR;
                             urc_quant -= quant_conversor;
                             eur_quant += quant_convertido;
                             break;
 
-                        case 4: // URC para JPY
+                        case 4: // Urubu Coin para Iene
 
                             quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_JPY;
                             urc_quant -= quant_conversor;
                             jpy_quant += quant_convertido;
                             break;
 
-                        case 5: // URC para BTC
+                        case 5: // Urubu Coin para Bitcoin
 
                             quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_BTC;
                             urc_quant -= quant_conversor;
                             btc_quant += quant_convertido;
                             break;
 
-                        case 6: // URC para ETH
+                        case 6: // Urubu Coin para Ethereum
 
                             quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_ETH;
                             urc_quant -= quant_conversor;
                             eth_quant += quant_convertido;
                             break;
 
-                        case 7: // URC para SOL
+                        case 7: // Urubu Coin para Solana
 
                             quant_convertido = (quant_conversor * URC_TO_BRL) * BRL_TO_SOL;
                             urc_quant -= quant_conversor;
                             sol_quant += quant_convertido;
                             break;
-                            
+
                     }
-                } else {
+
+                } 
+
+                else {
+
                     System.out.println("Saldo insuficiente para a conversão!");
                     return;
+
                 }
                 break;
-                        
-            
+
             }
+
         System.out.println("Conversão realizada com sucesso!");
         System.out.println("Quantia convertida: " + quant_conversor);
         System.out.println("Valor convertido: " + quant_convertido);
+
     }
- }
 
-
-
-    
-
-
+}
