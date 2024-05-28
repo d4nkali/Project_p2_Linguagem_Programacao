@@ -1,4 +1,4 @@
-// Adicionar formatos Utils, é uma biblioteca para mexer com números
+// Bibliotecas para mexer com a formatação dos dados
 
 import java.text.DecimalFormat;
 import java.text.NumberFormat;
@@ -7,7 +7,7 @@ import java.util.Date;
 
 public class Utils {
 
-    //Formatar os números e a data
+    //* Formata os números string para , ao invés de . e a data
 
     static NumberFormat formatandoNumeros = new DecimalFormat("R$ #,##0.00");
     static SimpleDateFormat formatandoData = new SimpleDateFormat("dd/MM/yyyy");
