@@ -16,4 +16,9 @@ Segunda entrega de Sprint com as adições dos requisitos:
 3. [RF005] Saque = @Olausz @JoaoMagalhaes-hub @d4nkali;
 4. [RF006] Transferência = @JoaoMagalhaes-hub.
 
-#
+# Sprint 3
+
+Terceira entrega de Sprint com as adições dos requisitos:
+
+1. [RF007] Conversor = @JoaoMagalhaes-hub, @d4nkali;
+2. [RF008] Stake = @Olausz, @d4nkali, @JANzxz.
